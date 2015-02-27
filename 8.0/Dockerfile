@@ -44,4 +44,4 @@ RUN mkdir /mnt/extra-addons
 # Mount /var/lib/odoo to allow restoring filestore
 VOLUME ["/var/lib/odoo"]
 
-CMD ["/run.sh"]
+ENTRYPOINT ["/run.sh"]
