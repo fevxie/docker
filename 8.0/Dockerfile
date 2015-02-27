@@ -38,6 +38,9 @@ RUN curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odo
 COPY ./run.sh /
 COPY ./openerp-server.conf /etc/odoo/
 
+# Create dir for mounted users addons
+RUN mkdir /mnt/extra-addons
+
 # Mount /var/lib/odoo to allow restoring filestore
 VOLUME ["/var/lib/odoo"]
 
